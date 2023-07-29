@@ -1,10 +1,34 @@
+# GPT Word-Level Implementation
 
-# nanogpt-lecture
+Welcome to this repository which is home to a Python-based implementation of the GPT model, specifically optimized at the word-level. The architectural design and coding approach of the model have been drawn from the [stellar tutorial](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) provided by Andrej Karpathy. We extend our heartfelt gratitude towards him for the conceptual understanding and inspiration.
 
-Code created in the [Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html) video lecture series, specifically on the first lecture on nanoGPT. Publishing here as a Github repo so people can easily hack it, walk through the `git log` history of it, etc.
+## Prerequisites
 
-NOTE: sadly I did not go too much into model initialization in the video lecture, but it is quite important for good performance. The current code will train and work fine, but its convergence is slower because it starts off in a not great spot in the weight space. Please see [nanoGPT model.py](https://github.com/karpathy/nanoGPT/blob/master/model.py) for `# init all weights` comment, and especially how it calls the `_init_weights` function. Even more sadly, the code in this repo is a bit different in how it names and stores the various modules, so it's not possible to directly copy paste this code here. My current plan is to publish a supplementary video lecture and cover these parts, then I will also push the exact code changes to this repo. For now I'm keeping it as is so it is almost exactly what we actually covered in the video.
+The codebase here necessitates the following Python libraries:
 
-### License
+* PyTorch (torch)
 
-MIT
+If these libraries are not already installed in your environment, you can easily do so with pip:
+
+```sh
+pip install torch
+```
+
+## Usage
+This repository features two distinct models - a basic bigram model and a more advanced, GPT2 model replica.
+
+### Training
+To train one of these models, all you need to do is **run the train.ipynb** notebook.
+
+### Predicting
+For generating text using these models:
+
+```sh
+python predict.py
+```
+
+
+
+## License and Acknowledgment
+
+The original concepts and tutorial that this repository is based on were crafted by Andrej Karpathy. All associated rights are his. The intention of this repository and its contents is purely educational, aimed at spreading knowledge.
