@@ -4,11 +4,11 @@ from torch.nn import functional as F
 
 
 # Model Params
-N_EMB = 32
+N_EMB = 384
 
-HEAD_SIZE = 8
-N_HEADS = 4
-N_BLOCKS = 4
+HEAD_SIZE = 96 # Paper says N_EMB/N_HEADS
+N_HEADS = 6
+N_BLOCKS = 6
 
 FF_MULTIPLIER = 4  # Upscale FeedForward layer by this factor
 
@@ -51,7 +51,7 @@ class MultiHeadAttention(nn.Module):
     def __init__(self):
         super().__init__()
         self.heads = nn.ModuleList([SelfAttention() for _ in range(N_HEADS)])
-        self.proj = nn.Linear(N_EMB, N_EMB)
+        self.proj = nn.Linear(HEAD_SIZE * N_HEADS, N_EMB)
         self.dropout = nn.Dropout(DROPOUT)
 
     def forward(self, x):
