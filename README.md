@@ -1,6 +1,6 @@
-# GPT Word-Level Implementation
+# GPT Character-Level Implementation
 
-Welcome to this repository which is home to a Python-based implementation of the GPT model, specifically optimized at the word-level. The architectural design and coding approach of the model have been drawn from the [stellar tutorial](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) provided by Andrej Karpathy. We extend our heartfelt gratitude towards him for the conceptual understanding and inspiration.
+Welcome to this repository which is home to a Python-based implementation of the GPT model, specifically optimized at the char-level. The architectural design and coding approach of the model have been drawn from the [stellar tutorial](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ) provided by Andrej Karpathy. We extend our heartfelt gratitude towards him for the conceptual understanding and inspiration.
 
 ## Example result:
 12M parameter version of the word GPT model trained on a A10 for ~20minutes generated the following Shakespeare aftertaste:
